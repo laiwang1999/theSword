@@ -5,7 +5,8 @@ public class Main {
         StringBuffer str = new StringBuffer("hello world");
         System.out.println(replaceSpace(str));
     }
+
     public static String replaceSpace(StringBuffer str) {
-        return str.toString().replace(" ","%20");
+        return str.toString().replace(" ", "%20");
     }
 }
