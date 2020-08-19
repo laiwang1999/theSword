@@ -2,13 +2,17 @@ package com.niuke.i_JumpFloorII;
 
 public class Main {
     public static void main(String[] args) {
-
+        System.out.println(JumpFloorII(2));
     }
-    public int JumpFloorII(int target) {
-        int ret =0;
-        for(int i=target-1;i>=1;i--){
-            ret+=i;
+    public static int JumpFloorII(int target) {
+        int[] arr = new int[100];
+        arr[0]=1;
+        arr[1]=1;
+        for (int i = 2; i <=target ; i++) {
+            for(int j=0;j<i;j++){
+                arr[i]=arr[i]+arr[j];
+            }
         }
-        return ret+1;
+        return arr[target];
     }
 }
